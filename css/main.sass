@@ -1,0 +1,185 @@
+@import "variables"
+
+a
+  color: inherit
+
+body
+  font-family: sans-serif
+  color: white
+  background: $background-color
+  overflow: hidden
+  overflow-y: auto
+
+
+.header
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 10
+  background: $background-color
+  height: $header-height
+  color: white
+  display: flex
+  align-items: center
+  justify-content: space-around
+  overflow: hidden
+  transition-duration: 500ms
+  transition-timing-function: ease-out
+  transition-property: all
+
+  &.extended
+    background: transparentize($background-color, 0.5)
+    backdrop-filter: blur(7px)
+    -webkit-backdrop-filter: blur(7px)
+    height: 100vh
+
+    ion-icon
+      transform: rotate(180deg)
+
+  @media (max-width: $mobile-breakpoint)
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-end
+
+  ion-icon
+    transition-duration: 500ms
+    transition-timing-function: ease-out
+    transition-property: all
+    position: absolute
+    right: 1vh
+    top: 1vh
+    @media (min-width: $mobile-breakpoint)
+      display: none
+
+
+  a
+    color: inherit
+    text-decoration: inherit
+    font-weight: bold
+    cursor: pointer
+
+    @media (min-width: $mobile-breakpoint)
+      height: $header-height
+      line-height: $header-height
+      flex: 1
+      text-align: center
+
+      &:hover
+        background-color: #252525
+
+    @media (max-width: $mobile-breakpoint)
+      font-size: 8vw
+      margin-top: 10px
+      margin-right: 10px
+
+      &:nth-of-type(1)
+        margin-top: 7vh
+
+.intro
+  height: 100vh
+  width: 100vw
+  overflow: hidden
+
+  h1
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translateY(-100%)
+    font-size: 10vw
+    width: 100vw
+    text-align: center
+    z-index: 1
+    color: white
+
+  .contact-info
+    position: absolute
+    top: 50vh
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 5
+
+    > *:nth-of-type(2n)
+      transform: translateX(100vw)
+
+    > *:nth-of-type(2n+1)
+      transform: translateX(-100vw)
+
+  video
+    height: 100%
+    width: 100%
+    object-fit: cover
+    filter: saturate(0) brightness(0.6)
+    z-index: -1
+
+section#general
+  text-align: center
+  margin-bottom: $section-margin
+
+  h1
+    font-size: 3em
+    margin-bottom: 20px
+
+  ul
+    text-align: left
+    width: fit-content
+    margin-left: auto
+    margin-right: auto
+
+section.preview
+  display: flex
+  justify-content: space-between
+  margin-bottom: $section-margin
+  width: 100vw
+  overflow: hidden
+
+  .img-container, .info
+    transition-property: transform
+    transition-duration: 500ms
+    transition-timing-function: ease-out
+
+  &.visible
+    .img-container, .info
+      transform: translateX(0) !important
+
+  .img-container
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 50vw
+
+    &.right
+      transform: translateX(55vw)
+
+    &.left
+      transform: translateX(-55vw)
+
+
+    img
+      max-height: 50vh
+      max-width: 50vh
+      height: 40vw
+      width: 40vw
+      object-fit: cover
+      border-radius: $side-margin
+      box-shadow: 0 0 10px 2px #000
+
+  .info
+    width: 50vw
+    margin-top: auto
+    margin-bottom: auto
+
+    h1
+      font-size: 3vh
+
+    a
+      color: inherit
+
+    &.right
+      margin-right: $side-margin
+      transform: translateX(55vw)
+
+    &.left
+      margin-left: $side-margin
+      text-align: right
+      transform: translateX(-55vw)

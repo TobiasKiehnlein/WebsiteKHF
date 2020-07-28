@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="86679687-0b18-45b2-93d9-8fa1f9538e2b" name="strato" url="http://vserver.kiehnlein.com">
+        <fileTransfer accessType="SFTP" host="vserver.kiehnlein.com" port="22" sshConfigId="f08b4ad4-3291-4d3b-a3a4-38fba947035b" sshConfig="root@vserver.kiehnlein.com:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

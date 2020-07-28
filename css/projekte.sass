@@ -1,0 +1,20 @@
+@import "variables"
+
+#content
+  margin: calc(#{$header-height} + #{$side-margin}) $side-margin
+
+  display: grid
+  grid-template-columns: auto auto auto auto
+  grid-column-gap: $side-margin
+  grid-row-gap: $side-margin
+
+  img
+    max-width: 20vw
+    margin-top: auto
+    margin-bottom: auto
+
+  @media (max-width: $mobile-breakpoint)
+    grid-template-columns: auto auto
+
+    img
+      max-width: 40vw

@@ -1,0 +1,69 @@
+@import "variables"
+
+#head
+  margin-top: calc(#{$header-height} + #{$side-margin})
+  position: relative
+
+  img
+    width: 32vw
+    height: 32vw
+    margin-left: 20px
+    object-fit: cover
+
+    @media (max-width: $mobile-breakpoint)
+      width: 40vw
+      height: 40vw
+      border-radius: 20vw
+
+  h1, h2
+    position: absolute
+
+  h1
+    top: 3vw
+    left: 35vw
+    font-size: 7vw
+
+    @media (max-width: $mobile-breakpoint)
+      font-size: 10vw
+      left: 50vw
+
+  h2
+    top: 14vw
+    left: 38vw
+    font-weight: lighter
+
+    @media (max-width: $mobile-breakpoint)
+      top: 40vw
+      left: 10px
+      font-size: 6vw
+
+#content
+  margin-top: calc(4 * #{$side-margin})
+  margin-left: $side-margin
+  margin-right: $side-margin
+
+  @media (max-width: $mobile-breakpoint)
+    margin-top: calc(6 * #{$side-margin})
+
+  img
+    float: right
+    object-fit: cover
+    margin-right: $side-margin
+    margin-left: $side-margin
+    border-radius: $side-margin
+    box-shadow: 0 0 10px 2px #000
+    max-height: 70vh
+
+    @media (max-width: $mobile-breakpoint)
+      float: none
+      height: 30vh
+      width: calc(100vw - calc(4 * #{$side-margin}))
+
+//.animated-text > h3
+//  transform: translateX(-105vw)
+//
+//.animated-text > p
+//  transform: translateX(105vw)
+//
+//.animated-text.visible > *
+//  transform: translateX(0) !important
