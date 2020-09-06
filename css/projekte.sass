@@ -1,5 +1,11 @@
 @import "variables"
 
+@function max($numbers...)
+  @return max#{'('}#{$numbers}#{')'}
+
+@function min($numbers...)
+  @return min#{'('}#{$numbers}#{')'}
+
 body
   overflow: hidden
 
@@ -15,24 +21,35 @@ body
   width: 100vw
 
 .polaroid
-  position: absolute
+  position: fixed
+  object-fit: cover
   width: 20vw
   max-width: 350px
+  max-height: 100vh
   min-width: 150px
-  transition-property: transform, left, top, width, max-width
+  transition-property: all
   transition-duration: 500ms
   transition-timing-function: ease-in-out
   z-index: 25
-
+  cursor: pointer
+  border-style: solid
+  border-top-width: min(2vw, 15px)
+  border-right-width: min(2vw, 15px)
+  border-left-width: min(2vw, 15px)
+  border-bottom-width: min(8vw, 60px)
+  border-color: white
+  -webkit-box-shadow: 0 0 11px 3px rgba(0, 0, 0, 0.51)
+  -moz-box-shadow: 0 0 11px 3px rgba(0, 0, 0, 0.51)
+  box-shadow: 0 0 11px 3px rgba(0, 0, 0, 0.51)
 
   &.presley
     top: 10vh
-    left: 15vw
+    left: 25vw
     transform: rotate(-20deg)
 
   &.jazzware
     top: 30vh
-    left: 10vw
+    left: 5vw
     transform: rotate(10deg)
 
   &.partyline
@@ -58,12 +75,15 @@ body
     transform: rotate(-20deg)
 
 
-.polaroid.active
-  transform: translateY(-50%)
-  top: 50vh
-  left: 5vw
-  width: 40vw
-  max-width: 48vw
+  &.active
+    transform: translateY(-50%)
+    top: 50vh
+    left: calc(5vw - 10px)
+    width: 40vw
+    max-width: 48vw
+    border-color: #fff0
+    border-width: 0
+    max-height: 90vh
 
 .text-container
   position: fixed
@@ -84,6 +104,7 @@ body
     opacity: 1
 
   .text
+    z-index: 30
     width: 48vw
     height: min-content
     position: absolute
