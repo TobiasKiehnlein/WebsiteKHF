@@ -85,6 +85,14 @@ body
     border-width: 0
     max-height: 90vh
 
+    @media (max-width: $mobile-breakpoint)
+      top: 10vh
+      left: 50vw
+      max-height: 30vh
+      width: 80vw
+      max-width: 80vw
+      transform: translateX(-50%)
+
 .text-container
   position: fixed
   top: 0
@@ -114,3 +122,9 @@ body
     margin-top: auto
     margin-bottom: auto
     margin-right: 2vw
+
+    @media (max-width: $mobile-breakpoint)
+      top: 40vh
+      width: unset
+      margin: 0 20px
+      text-align: center
