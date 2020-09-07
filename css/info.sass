@@ -9,6 +9,8 @@
     height: 32vw
     margin-left: 20px
     object-fit: cover
+    -webkit-transform: scaleX(-1)
+    transform: scaleX(-1)
 
     @media (max-width: $mobile-breakpoint)
       width: 40vw
@@ -17,6 +19,7 @@
 
   h1, h2
     position: absolute
+    color: $primary-color
 
   h1
     top: 3vw
@@ -35,7 +38,8 @@
     @media (max-width: $mobile-breakpoint)
       top: 40vw
       left: 10px
-      font-size: 6vw
+      font-size: 1.2em
+      color: unset
 
 #content
   margin-top: calc(4 * #{$side-margin})

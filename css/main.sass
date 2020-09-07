@@ -55,7 +55,7 @@ body
   a
     color: inherit
     text-decoration: inherit
-    font-weight: bold
+    font-weight: lighter
     cursor: pointer
 
     @media (min-width: $mobile-breakpoint)
@@ -64,13 +64,23 @@ body
       flex: 1
       text-align: center
 
+      &.active
+        color: $primary-color
+
       &:hover
         background-color: #252525
 
     @media (max-width: $mobile-breakpoint)
       font-size: 8vw
       margin-top: 10px
-      margin-right: 10px
+      padding-right: 10px
+      text-align: right
+      width: 100%
+
+      &.active
+        background-color: transparentize($primary-color, 0.9)
+        font-weight: normal
+        color: $primary-color
 
       &:nth-of-type(1)
         margin-top: 7vh
@@ -87,6 +97,7 @@ body
     font-size: min(10vw, 80px)
     margin: 0 0 10px
     padding-bottom: 20vh
+    color: $primary-color
 
 #v0
   position: fixed
@@ -113,7 +124,8 @@ section.container
     top: 0
     bottom: 0
     height: 100%
-    filter: grayscale(1)
+    //filter: grayscale(1)
+    //filter: invert(66%) sepia(20%) saturate(4797%) hue-rotate(344deg) brightness(102%) contrast(92%)
 
   .content
     position: sticky
@@ -130,6 +142,7 @@ section.container
       display: inline-block
       padding: 10px 15px
       margin: 0
+      color: $primary-color
 
     p
       font-size: 1.5em
@@ -145,7 +158,7 @@ section.container
     height: 600px
 
   &:nth-of-type(4)
-    height: 800px
+    height: 1000px
 
 
 .entered
@@ -179,113 +192,3 @@ section.container
   100%
     -webkit-filter: blur(0px)
     filter: blur(0px)
-//opacity: 1
-
-
-//.intro
-//  height: 100vh
-//  width: 100vw
-//  overflow: hidden
-//
-//  h1
-//    position: absolute
-//    top: 50%
-//    left: 0
-//    transform: translateY(-100%)
-//    font-size: 10vw
-//    width: 100vw
-//    text-align: center
-//    z-index: 1
-//    color: white
-//
-//  .contact-info
-//    position: absolute
-//    top: 50vh
-//    left: 50%
-//    transform: translateX(-50%)
-//    z-index: 5
-//
-//    > *:nth-of-type(2n)
-//      transform: translateX(100vw)
-//
-//    > *:nth-of-type(2n+1)
-//      transform: translateX(-100vw)
-//
-//  video
-//    height: 100%
-//    width: 100%
-//    object-fit: cover
-//    filter: saturate(0) brightness(0.6)
-//    z-index: -1
-//
-//section#general
-//  text-align: center
-//  margin-bottom: $section-margin
-//
-//  h1
-//    font-size: 3em
-//    margin-bottom: 20px
-//
-//  ul
-//    text-align: left
-//    width: fit-content
-//    margin-left: auto
-//    margin-right: auto
-//
-//section.preview
-//  display: flex
-//  justify-content: space-between
-//  margin-bottom: $section-margin
-//  width: 100vw
-//  overflow: hidden
-//
-//  .img-container, .info
-//    transition-property: transform
-//    transition-duration: 500ms
-//    transition-timing-function: ease-out
-//
-//  &.visible
-//    .img-container, .info
-//      transform: translateX(0) !important
-//
-//  .img-container
-//    display: flex
-//    align-items: center
-//    justify-content: center
-//    width: 50vw
-//
-//    &.right
-//      transform: translateX(55vw)
-//
-//    &.left
-//      transform: translateX(-55vw)
-//
-//
-//    img
-//      max-height: 50vh
-//      max-width: 50vh
-//      height: 40vw
-//      width: 40vw
-//      object-fit: cover
-//      border-radius: $side-margin
-//      box-shadow: 0 0 10px 2px #000
-//
-//  .info
-//    width: 50vw
-//    margin-top: auto
-//    margin-bottom: auto
-//
-//    h1
-//      font-size: 3vh
-//
-//    a
-//      color: inherit
-//
-//    &.right
-//      margin-right: $side-margin
-//      transform: translateX(55vw)
-//
-//    &.left
-//      margin-left: $side-margin
-//      text-align: right
-//      transform: translateX(-55vw)

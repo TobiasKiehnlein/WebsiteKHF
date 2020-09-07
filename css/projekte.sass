@@ -41,6 +41,7 @@ body
   -webkit-box-shadow: 0 0 11px 3px rgba(0, 0, 0, 0.51)
   -moz-box-shadow: 0 0 11px 3px rgba(0, 0, 0, 0.51)
   box-shadow: 0 0 11px 3px rgba(0, 0, 0, 0.51)
+  transform: none
 
   &.presley
     top: 10vh
@@ -88,7 +89,7 @@ body
     @media (max-width: $mobile-breakpoint)
       top: 10vh
       left: 50vw
-      max-height: 30vh
+      max-height: 45vh
       width: 80vw
       max-width: 80vw
       transform: translateX(-50%)
@@ -124,7 +125,7 @@ body
     margin-right: 2vw
 
     @media (max-width: $mobile-breakpoint)
-      top: 40vh
-      width: unset
+      top: 55vh
+      width: calc(100vw - 40px)
       margin: 0 20px
       text-align: center
