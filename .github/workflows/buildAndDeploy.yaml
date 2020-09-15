@@ -17,9 +17,9 @@ jobs:
                 run: |
                     npm install
                     npm run build --if-present
-            -name: list output files
+            -   name: list output files
                 run: ls
-            -name: deploy
+            -   name: deploy
                 uses: SamKirkland/FTP-Deploy-Action@2.0.0
                 env:
                     FTP_SERVER: ${{ secrets.FTP_SERVER }}
