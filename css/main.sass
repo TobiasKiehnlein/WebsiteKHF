@@ -1,25 +1,25 @@
 @import "variables"
 
 a
-  color: inherit
+    color: inherit
 
 body
-  font-family: sans-serif
-  color: white
-  background: $background-color
+    font-family: sans-serif
+    color: white
+    background: $background-color
 
 .noselect
-  -webkit-touch-callout: none
-  /* iOS Safari */
-  -webkit-user-select: none
-  /* Safari */
-  -khtml-user-select: none
-  /* Konqueror HTML */
-  -moz-user-select: none
-  /* Old versions of Firefox */
-  -ms-user-select: none
-  /* Internet Explorer/Edge */
-  user-select: none
+    -webkit-touch-callout: none
+    /* iOS Safari */
+    -webkit-user-select: none
+    /* Safari */
+    -khtml-user-select: none
+    /* Konqueror HTML */
+    -moz-user-select: none
+    /* Old versions of Firefox */
+    -ms-user-select: none
+    /* Internet Explorer/Edge */
+    user-select: none
 /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 
 body::-webkit-scrollbar
@@ -36,184 +36,152 @@ body::-webkit-scrollbar-track
     background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d)
 
 .header
-  position: absolute
-  top: 0
-  left: 0
-  right: 0
-  z-index: 10
-  background: transparentize($background-color, 0.2)
-  height: $header-height
-  color: white
-  display: flex
-  align-items: center
-  justify-content: space-around
-  overflow: hidden
-  transition-duration: 500ms
-  transition-timing-function: ease-out
-  transition-property: all
-
-  &.extended
-    background: transparentize($background-color, 0.5)
-    backdrop-filter: blur(7px)
-    -webkit-backdrop-filter: blur(7px)
-    height: 100vh
-    z-index: 50
-
-    ion-icon
-      transform: rotate(180deg)
-
-  @media (max-width: $mobile-breakpoint)
-    flex-direction: column
-    justify-content: flex-start
-    align-items: flex-end
-
-  ion-icon
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    z-index: 10
+    background: transparentize($background-color, 0.2)
+    height: $header-height
+    color: white
+    display: flex
+    align-items: center
+    justify-content: space-around
+    overflow: hidden
     transition-duration: 500ms
     transition-timing-function: ease-out
     transition-property: all
-    position: absolute
-    right: 1vh
-    top: 1vh
-    @media (min-width: $mobile-breakpoint)
-      display: none
 
+    &.extended
+        background: transparentize($background-color, 0.5)
+        backdrop-filter: blur(7px)
+        -webkit-backdrop-filter: blur(7px)
+        height: 100vh
+        z-index: 50
 
-  a
-    color: inherit
-    text-decoration: inherit
-    font-weight: lighter
-    cursor: pointer
-
-    @media (min-width: $mobile-breakpoint)
-      height: $header-height
-      line-height: $header-height
-      flex: 1
-      text-align: center
-
-      &.active
-        color: $primary-color
-
-      &:hover
-        background-color: #252525
+        ion-icon
+            transform: rotate(180deg)
 
     @media (max-width: $mobile-breakpoint)
-      font-size: 8vw
-      margin-top: 10px
-      padding-right: 10px
-      text-align: right
-      width: 100%
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-end
 
-      &.active
-        background-color: transparentize($primary-color, 0.9)
-        font-weight: normal
-        color: $primary-color
+    ion-icon
+        transition-duration: 500ms
+        transition-timing-function: ease-out
+        transition-property: all
+        position: absolute
+        right: 1vh
+        top: 1vh
+        @media (min-width: $mobile-breakpoint)
+            display: none
 
-      &:nth-of-type(1)
-        margin-top: 70px
+
+    a
+        color: inherit
+        text-decoration: inherit
+        font-weight: lighter
+        cursor: pointer
+
+        @media (min-width: $mobile-breakpoint)
+            height: $header-height
+            line-height: $header-height
+            flex: 1
+            text-align: center
+
+            &.active
+                color: $primary-color
+
+            &:hover
+                background-color: #252525
+
+        @media (max-width: $mobile-breakpoint)
+            font-size: 8vw
+            margin-top: 10px
+            padding-right: 10px
+            text-align: right
+            width: 100%
+
+            &.active
+                background-color: transparentize($primary-color, 0.9)
+                font-weight: normal
+                color: $primary-color
+
+            &:nth-of-type(1)
+                margin-top: 70px
 
 .title-bar
-  height: 4000px
-  margin-left: 20px
-
-  h1
-    position: sticky
-    position: -webkit-sticky
-    top: 15vh
-    z-index: 5
-    font-size: min(10vw, 80px)
-    margin: 0 0 10px
-    padding-bottom: 20vh
-    color: $primary-color
-
-#v0
-  position: fixed
-  left: 0
-  top: 0
-  width: 100vw
-  height: 100vh
-  object-fit: cover
-
-section.container
-  z-index: 1
-  position: relative
-  background-color: transparentize($background-color, 0.2)
-  //background-color: transparent
-  //backdrop-filter: blur(7px)
-  //-webkit-backdrop-filter: blur(7px)
-  padding: 10px
-
-  img
-    width: 50%
-    position: absolute
-    z-index: -1
-    right: 0
-    top: 0
-    bottom: 0
-    height: 100%
-  //filter: grayscale(1)
-  //filter: invert(66%) sepia(20%) saturate(4797%) hue-rotate(344deg) brightness(102%) contrast(92%)
-
-  .content
-    position: sticky
-    position: -webkit-sticky
-    top: 33.3%
-    border-radius: 5px
-    width: fit-content
+    height: 4000px
     margin-left: 20px
-    margin-right: 20px
-    padding: 10px
 
     h1
-      font-size: 3em
-      display: inline-block
-      padding: 10px 15px
-      margin: 0
-      color: $primary-color
+        position: sticky
+        position: -webkit-sticky
+        top: 15vh
+        z-index: 5
+        font-size: min(10vw, 80px)
+        margin: 0 0 10px
+        padding-bottom: 20vh
+        color: $primary-color
 
-    p
-      font-size: 1.5em
-      padding: 0 15px
+#v0
+    position: fixed
+    left: 0
+    top: 0
+    width: 100vw
+    height: 100vh
+    object-fit: cover
 
-  &:nth-of-type(1)
-    height: 1000px
+section.container
+    z-index: 1
+    position: relative
+    background-color: transparentize($background-color, 0.2)
+    //background-color: transparent
+    //backdrop-filter: blur(7px)
+    //-webkit-backdrop-filter: blur(7px)
+    padding: 10px
 
-  &:nth-of-type(2)
-    height: 600px
+    img
+        width: 50%
+        position: absolute
+        z-index: -1
+        right: 0
+        top: 0
+        bottom: 0
+        height: 100%
+    //filter: grayscale(1)
+    //filter: invert(66%) sepia(20%) saturate(4797%) hue-rotate(344deg) brightness(102%) contrast(92%)
 
-  &:nth-of-type(3)
-    height: 600px
+    .content
+        position: sticky
+        position: -webkit-sticky
+        top: 33.3%
+        border-radius: 5px
+        width: fit-content
+        margin-left: 20px
+        margin-right: 20px
+        padding: 10px
 
-  &:nth-of-type(4)
-    height: 1000px
+        h1
+            font-size: 3em
+            display: inline-block
+            padding: 10px 15px
+            margin: 0
+            color: $primary-color
 
+        p
+            font-size: 1.5em
+            padding: 0 15px
 
-//.entered
-//-webkit-animation: text-focus-in 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530) both
-//animation: text-focus-in 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+    &:nth-of-type(1)
+        height: 1000px
 
-/**
- * ----------------------------------------
- * animation text-focus-in
- * ----------------------------------------
- */
-@-webkit-keyframes text-focus-in
-  0%
-    -webkit-filter: blur(12px)
-    filter: blur(12px)
-  //opacity: 0
+    &:nth-of-type(2)
+        height: 600px
 
-  100%
-    -webkit-filter: blur(0px)
-    filter: blur(0px)
-//opacity: 1
+    &:nth-of-type(3)
+        height: 600px
 
-
-@keyframes text-focus-in
-  0%
-    -webkit-filter: blur(12px)
-    filter: blur(12px)
-  //opacity: 0
-
-  100%
-    -webkit-filter: blur(0px)
-    filter: blur(0px)
+    &:nth-of-type(4)
+        height: 1000px
