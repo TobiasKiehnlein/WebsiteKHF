@@ -8,6 +8,32 @@ body
   color: white
   background: $background-color
 
+.noselect
+  -webkit-touch-callout: none
+  /* iOS Safari */
+  -webkit-user-select: none
+  /* Safari */
+  -khtml-user-select: none
+  /* Konqueror HTML */
+  -moz-user-select: none
+  /* Old versions of Firefox */
+  -ms-user-select: none
+  /* Internet Explorer/Edge */
+  user-select: none
+/* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+
+body::-webkit-scrollbar
+    width: 10px
+    height: 10px
+
+body::-webkit-scrollbar-thumb
+    background: #201c29
+    border-radius: 10px
+    box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, .25), inset -2px -2px 2px rgba(0, 0, 0, .25)
+
+
+body::-webkit-scrollbar-track
+    background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d)
 
 .header
   position: absolute
@@ -83,7 +109,7 @@ body
         color: $primary-color
 
       &:nth-of-type(1)
-        margin-top: 7vh
+        margin-top: 70px
 
 .title-bar
   height: 4000px
@@ -124,8 +150,8 @@ section.container
     top: 0
     bottom: 0
     height: 100%
-    //filter: grayscale(1)
-    //filter: invert(66%) sepia(20%) saturate(4797%) hue-rotate(344deg) brightness(102%) contrast(92%)
+  //filter: grayscale(1)
+  //filter: invert(66%) sepia(20%) saturate(4797%) hue-rotate(344deg) brightness(102%) contrast(92%)
 
   .content
     position: sticky

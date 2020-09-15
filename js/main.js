@@ -1,5 +1,7 @@
 import enterView from './sticky'
 
+const isIOS = iOS();
+
 enterView({
   selector: 'section',
   enter: function (el) {
@@ -8,19 +10,20 @@ enterView({
 })
 
 // lower numbers = faster playback
-const playbackConst = 1000,
-  // select video element
-  vid = document.getElementById('v0');
+const playbackConst = 1000;
+// select video element
+const vid = document.getElementById('v0');
 
 // dynamically set the page height according to video length
 vid.addEventListener('loadedmetadata', () => {
-  // setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px"; Wasn't necessary anymore... still a good way to figure out how large the sum of all sections should be
+  if (!isIOS) return;
   vid.pause()
 });
 
 
 // Use requestAnimationFrame for smooth playback
-const scrollPlay = () => { 
+const scrollPlay = () => {
+  if (!isIOS) return;
   vid.currentTime = window.pageYOffset / playbackConst;
 
   window.requestAnimationFrame(scrollPlay);
@@ -28,3 +31,15 @@ const scrollPlay = () => {
 
 window.requestAnimationFrame(scrollPlay);
 
+function iOS() {
+  return [
+      'iPad Simulator',
+      'iPhone Simulator',
+      'iPod Simulator',
+      'iPad',
+      'iPhone',
+      'iPod'
+    ].includes(navigator.platform)
+    // iPad on iOS 13 detection
+    || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+}
