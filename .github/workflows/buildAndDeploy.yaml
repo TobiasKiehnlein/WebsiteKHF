@@ -21,7 +21,7 @@ jobs:
                 uses: burnett01/rsync-deployments@4.1
                 with:
                     remote_host: ${{ secrets.FTP_SERVER }}
-                    reomte_path: ~/khfollner.kiehnlein.com
+                    reomte_path: /root/khfollner.kiehnlein.com
                     remote_user: ${{ secrets.FTP_USERNAME }}
                     remote_key: ${{ secrets.FTP_KEY }}
                     switches: -avzr --delete
