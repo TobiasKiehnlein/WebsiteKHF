@@ -17,12 +17,13 @@ jobs:
                     npm run build --if-present
             -   name: list output files
                 run: ls
-#            -   name: deploy
-#                uses: burnett01/rsync-deployments@4.1
-#                with:
-#                    remote_host: ${{ secrets.FTP_SERVER }}
-#                    remote_path: /var/www/khfollner.kiehnlein.com
-#                    remote_user: ${{ secrets.FTP_USERNAME }}
-#                    remote_key: ${{ secrets.FTP_KEY }}
-#                    switches: -avzr --delete
-#                    path: dist/
+            -   name: deploy
+                uses: SamKirkland/FTP-Deploy-Action@2.0.0
+                    env:
+                        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+                        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+                        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+                        LOCAL_DIR: dist
+                        METHOD: sftp
+                        PORT: 22
+                        ARGS: --delete --remote-root /var/www/khfollner.kiehnlein.com

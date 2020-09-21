@@ -35,6 +35,10 @@ body::-webkit-scrollbar-thumb
 body::-webkit-scrollbar-track
 	background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d)
 
+@media (min-width: $mobile-breakpoint)
+	.menu-button
+		transform: translateX(200px) !important
+
 .header
 	position: absolute
 	top: 0
