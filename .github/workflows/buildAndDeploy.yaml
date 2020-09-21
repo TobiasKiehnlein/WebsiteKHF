@@ -26,4 +26,5 @@ jobs:
                     LOCAL_DIR: dist
                     METHOD: sftp
                     PORT: 22
-                    ARGS: --delete --remote-root /var/www/khfollner.kiehnlein.com
+                    ARGS: --delete
+                    GIT-FTP-ARGS: --remote-root /var/www/khfollner.kiehnlein.com
