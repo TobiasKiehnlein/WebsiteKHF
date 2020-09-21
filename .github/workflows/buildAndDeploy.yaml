@@ -1,29 +1,29 @@
-name: buildAndDeploy
-
-on: [ push ]
-
-jobs:
-    build-and-deploy:
-        runs-on: ubuntu-latest
-        steps:
-            -   uses: actions/checkout@v1
-            -   name: Use Node.js 12.18.3
-                uses: actions/setup-node@v1
-                with:
-                    node-version: 12.18.3
-            -   name: npm install, build
-                run: |
-                    npm install
-                    npm run build --if-present
-            -   name: list output files
-                run: ls
-            -   name: deploy
-                uses: SamKirkland/FTP-Deploy-Action@2.0.0
-                env:
-                    FTP_SERVER: ${{ secrets.FTP_SERVER }}/var/www/html/khfollner
-                    FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-                    FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-                    LOCAL_DIR: dist
-                    METHOD: sftp
-                    PORT: 22
-                    ARGS: --delete
+#name: buildAndDeploy
+#
+#on: [ push ]
+#
+#jobs:
+#    build-and-deploy:
+#        runs-on: ubuntu-latest
+#        steps:
+#            -   uses: actions/checkout@v1
+#            -   name: Use Node.js 12.18.3
+#                uses: actions/setup-node@v1
+#                with:
+#                    node-version: 12.18.3
+#            -   name: npm install, build
+#                run: |
+#                    npm install
+#                    npm run build --if-present
+#            -   name: list output files
+#                run: ls
+#            -   name: deploy
+#                uses: SamKirkland/FTP-Deploy-Action@2.0.0
+#                env:
+#                    FTP_SERVER: ${{ secrets.FTP_SERVER }}/var/www/html/khfollner
+#                    FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+#                    FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+#                    LOCAL_DIR: dist
+#                    METHOD: sftp
+#                    PORT: 22
+#                    ARGS: --delete
