@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Karlheinz Follner - Unterricht</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.sass">
+  <link rel="stylesheet" href="css/unterricht.sass">
+
+  <meta name="theme-color" content="#fafafa">
+  <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+<div class="header">
+  <ion-icon name="menu-outline" size="large" class="menu-button"></ion-icon>
+  <a href="/">Start</a>
+  <a href="/info.html">Info</a><a href="/unterricht.html">Unterricht</a>
+  <a href="/projekte.html">Projekte</a>
+  <a href="/notenhefte.html">Notenhefte</a>
+  <a href="mailto:info@khfollner.de">Email</a>
+  <a href="/impressum.html">Impressum</a>
+</div>
+
+<div id="content">
+  <h2 class="warning">Wegen der aktuellen Corona-Virus-Lage biete ich auch Online-Unterricht an.</h2>
+  <h2 class="warning">Kontaktieren Sie mich!</h2>
+
+  <h3>Klavierlehrer und Keyboardlehrer</h3>
+
+  <p>Ich gebe Klavierunterricht und Keyboardunterricht im Gebiet:</p>
+  <ul>
+    <li>Mering</li>
+    <li>Merching</li>
+    <li>Kissing</li>
+    <li>Ried</li>
+    <li>Althegnenberg</li>
+    <li>Mittelstetten</li>
+    <li>Hörmannsberg</li>
+    <li>Tegernbach</li>
+  </ul>
+  <br/>
+  <p>--- komme ins Haus ---</p>
+  <br/>
+  <p>Außerdem doziere ich seit über 15 Jahren an der VHS-Bergkirchen und
+    gebe auf Anfrage Workshops für Bands in verschiedenen Besetzungen.</p>
+  <p>Ich gebe individuellen Unterricht für Anfänger und Fortgeschrittene,
+    Kinder und Erwachsene.</p>
+  <p>Durch meine klassische Klavierausbildung und langjährige Erfahrung in
+    verschiedensten Bereichen der Musik kann ich jedem Schüler
+    einen Unterricht bieten, der ihm die technischen Voraussetzungen für seinen
+    ganz persönlichen Musikstil gibt.</p>
+
+  <b>Für eine kostenlose Probestunde komme ich gerne zu Ihnen.</b>
+</div>
+
+<script src="js/NavMenu.js"></script>
+</body>
+</html>
