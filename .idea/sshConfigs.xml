@@ -3,6 +3,7 @@
   <component name="SshConfigs">
     <configs>
       <sshConfig authType="PASSWORD" host="vserver.kiehnlein.com" id="f08b4ad4-3291-4d3b-a3a4-38fba947035b" port="22" nameFormat="DESCRIPTIVE" username="root" />
+      <sshConfig authType="PASSWORD" host="ssh.strato.de" id="37bda719-0a2f-4877-b2d0-86e73b772c9a" port="22" nameFormat="DESCRIPTIVE" username="kiehnlein.com" />
     </configs>
   </component>
 </project>

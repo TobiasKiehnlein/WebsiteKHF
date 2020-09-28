@@ -9,6 +9,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="234683d4-669d-466e-9fa3-c6a60f017a1c" name="strato_web" url="http://kiehnlein.com">
+        <fileTransfer rootFolder="/khfollner" accessType="SFTP" host="ssh.strato.de" port="22" sshConfigId="37bda719-0a2f-4877-b2d0-86e73b772c9a" sshConfig="kiehnlein.com@ssh.strato.de:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

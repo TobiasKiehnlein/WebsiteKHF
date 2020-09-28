@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="strato">
+  <component name="PublishConfigData" autoUpload="Always" serverName="strato_web">
     <serverData>
       <paths name="strato">
         <serverdata>
           <mappings>
             <mapping deploy="/root/khfollner.kiehnlein.com" local="$PROJECT_DIR$/dist" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="strato_web">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$/dist" web="/" />
           </mappings>
         </serverdata>
       </paths>
