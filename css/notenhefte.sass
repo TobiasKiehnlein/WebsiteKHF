@@ -1,5 +1,18 @@
 @import "variables"
 
+body::before
+	content: ''
+	position: fixed
+	top: 0
+	left: 0
+	z-index: -1
+	width: 100vw
+	height: 100vh
+	background-image: url("/img/Notenhefte_Backdrop.png")
+	background-size: cover
+	background-position: center
+	filter: blur(10px) brightness(.2)
+
 #title-bar
 	margin-top: $header-height
 	padding-top: 20px

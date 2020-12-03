@@ -12,18 +12,14 @@
 	<meta property="og:url" content="">
 	<meta property="og:image" content="">
 
-	<link rel="manifest" href="site.webmanifest">
-	<link rel="apple-touch-icon" href="icon.png">
-	<!-- Place favicon.ico in the root directory -->
-
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.sass">
+	<link rel="stylesheet" href="css/start-mobile.sass">
+	<link rel="stylesheet" href="css/start-desktop.sass">
 
 	<meta name="theme-color" content="#fafafa">
-	<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
 
-	</head>
+</head>
 
 <body>
 
@@ -32,9 +28,11 @@
 	<div class="menu-btn menu-button">
 		<div class="menu-button__burger"></div>
 	</div>
+	<img src="/img/Logo.svg" alt="Logo">
 	<a href="/">Start</a>
 	<a href="/info.html">Info</a><a href="/unterricht.html">Unterricht</a>
 	<a href="/projekte.html">Projekte</a>
+	<a href="/zuhoeren.html">Hörbeispiele</a>
 	<a href="/notenhefte.html">Notenhefte</a>
 	<a href="/email.html">Kontakt</a>
 	<a href="/impressum.html">Impressum</a>
@@ -42,53 +40,44 @@
 
 <div class="title-bar">
 	<h1>Karlheinz Follner</h1>
-	<div style="position: sticky; position: -webkit-sticky; top: 30vh; z-index: 5; margin-top: 1000px; padding-bottom: 10vh">
-		<h2 style="z-index: 5; padding: 5px; margin: 0">Klavier-, Keyboardlehrer und Musiker</h2>
+	<div>
+		<h2>Klavier-, Keyboardlehrer und Musiker</h2>
 	</div>
-	<div style="position: sticky; position: -webkit-sticky; top: 60vh; z-index: 5; margin-top: 1000px; margin-right: 10px; margin-bottom: 10px">
-		<p style="text-align: right">Reifersbrunner Str. 24</p>
-		<p style="text-align: right">86415 Mering</p>
-		<p style="text-align: right">Tel: <a href="tel:+49823392399">08233 / 92399</a></p>
+	<div class="contact">
+		<p>Reifersbrunner Str. 24</p>
+		<p>86415 Mering</p>
+		<p>Tel: <a href="tel:+49823392399">08233 / 92399</a></p>
 	</div>
 </div>
 
-<section class="container">
-	<div class="content">
-		<img src="img/khInfoImg.png" alt="" class="mobile">
+<div class="gradient"></div>
+<div class="blur element"></div>
+
+<div class="content">
+	<div class="element noselect">
+		<img src="img/TeacherWithStudent.png" alt="" class="mobile">
 		<h1>Lehrer</h1>
 		<p>Erfahren Sie mehr über meine <a href="unterricht.html">Unterrichte</a>...</p>
-		<img src="img/khInfoImg.png" alt="" class="desktop">
 	</div>
-</section>
 
-<section class="container">
-	<div class="content">
-		<img src="img/khInfoImg.png" alt="" class="mobile">
+	<div class="element noselect">
+		<img src="img/TrumpetAndPiano.png" alt="" class="mobile">
 		<h1>Musiker</h1>
 		<p>Erfahren Sie <a href="info.html">hier</a> mehr über mich als Musiker...</p>
-		<img src="img/khInfoImg.png" alt="" class="desktop">
-
 	</div>
-</section>
 
-<section class="container">
-	<div class="content">
-		<img src="img/khInfoImg.png" alt="" class="mobile">
+	<div class="element noselect">
+		<img src="img/Notenhefte.png" alt="" class="mobile">
 		<h1>Notenhefte</h1>
 		<p><a href="notenhefte.html">Hier</a> können Sie meine eigenen Hefte finden.</p>
-		<img src="img/khInfoImg.png" alt="" class="desktop">
-
 	</div>
-</section>
 
-<section class="container">
-	<div class="content">
-		<img src="img/khInfoImg.png" alt="" class="mobile">
+	<div class="element noselect">
+		<img src="img/KHTrumpet.png" alt="" class="mobile">
 		<h1>Meine Projekte</h1>
 		<p><a href="projekte.html">Hier</a> finden Sie meine Projekte...</p>
-		<img src="img/khInfoImg.png" alt="" class="desktop">
 	</div>
-</section>
+</div>
 
 <video id="v0" tabindex="0" preload playsinline muted autoplay>
 	<source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="video/PianoAndTrumpet.mp4"/>

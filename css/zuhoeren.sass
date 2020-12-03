@@ -1,0 +1,38 @@
+@import "variables"
+
+body::before
+    content: ''
+    position: fixed
+    top: 0
+    left: 0
+    z-index: -1
+    width: 100vw
+    height: 100vh
+    background-image: url("/img/piano.jpg")
+    background-size: cover
+    background-position: center
+    filter: blur(10px) brightness(.2)
+
+#title-bar
+    margin-top: $header-height
+    padding-top: 20px
+    margin-bottom: 10vh
+
+    h1
+        color: $primary-color
+
+    h1, h2
+        width: 100vw
+        text-align: center
+
+    h2
+        font-weight: lighter
+
+audio
+    display: block
+    margin: 5px auto 20px
+
+h3
+    color: $primary-color
+    text-align: center
+    margin: 0

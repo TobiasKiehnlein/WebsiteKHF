@@ -1,1 +1,0 @@
-{"version":3,"sources":["css/imprint.sass"],"names":[],"mappings":"AAEA,SACC,eAAA,CACA,gBAAA,CACA,iBAAA,CACA,kBAAA,CACA,aAEA,wBACC","file":"imprint.d9111c05.css","sourceRoot":"..","sourcesContent":["@import \"variables\"\n\n#content\n\tmax-width: 600px\n\tmargin-left: auto\n\tmargin-right: auto\n\ttext-align: justify\n\tpadding: 10px\n\n\th1, h2\n\t\tcolor: $primary-color\n"]}

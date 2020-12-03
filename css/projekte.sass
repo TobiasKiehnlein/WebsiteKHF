@@ -22,6 +22,8 @@ h1
 	object-fit: cover
 	height: 100vh
 	width: 100vw
+	filter: blur(10px) grayscale(1)
+	-webkit-filter: blur(10px) grayscale(1)
 
 .polaroid
 	position: fixed
@@ -108,7 +110,10 @@ h1
 	transform: translate(100vw, 0)
 	transition: 500ms ease-in-out
 	transition-property: opacity, transform, background-color
+	transition-delay: 200ms
 	background-color: #0000
+	backdrop-filter: blur(10px)
+	-webkit-backdrop-filter: blur(10px)
 
 	&.visible
 		background-color: #000A

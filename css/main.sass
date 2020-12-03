@@ -5,10 +5,8 @@
 
 *
 	font-family: 'Roboto', sans-serif
-
-	//font-family: 'Anton', sans-serif
-
-	//font-family: 'Yanone Kaffeesatz', sans-serif
+//font-family: 'Anton', sans-serif
+//font-family: 'Yanone Kaffeesatz', sans-serif
 a
 	color: inherit
 
@@ -29,20 +27,6 @@ body
 	-ms-user-select: none
 	/* Internet Explorer/Edge */
 	user-select: none
-/* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-
-//body::-webkit-scrollbar
-//	width: 10px
-//	height: 10px
-//
-//body::-webkit-scrollbar-thumb
-//	background: #201c29
-//	border-radius: 10px
-//	box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, .25), inset -2px -2px 2px rgba(0, 0, 0, .25)
-//
-//
-//body::-webkit-scrollbar-track
-//	background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d)
 
 @media (min-width: $mobile-breakpoint)
 	.menu-button
@@ -74,6 +58,8 @@ body
 		z-index: 50
 
 		/* ANIMATION */
+
+
 
 
 
@@ -159,7 +145,7 @@ body
 				background-color: #252525
 
 		@media (max-width: $mobile-breakpoint)
-			font-size: 8vw
+			font-size: min(8vw, 50px)
 			margin-top: 10px
 			padding-right: 10px
 			text-align: right
@@ -173,19 +159,14 @@ body
 			&:nth-of-type(1)
 				margin-top: 70px
 
-.title-bar
-	height: 4000px
-	margin-left: 20px
+	img
+		position: relative
+		height: $header-height
+		width: $header-height
+		object-fit: contain
+		margin-right: auto
+		margin-left: $side-margin
 
-	h1
-		position: sticky
-		position: -webkit-sticky
-		top: 15vh
-		z-index: 5
-		font-size: min(10vw, 80px)
-		margin: 0 0 10px
-		padding-bottom: 20vh
-		color: $primary-color
 
 #v0
 	position: fixed
@@ -194,72 +175,4 @@ body
 	width: 100vw
 	height: 100vh
 	object-fit: cover
-
-section.container
-	z-index: 1
-	position: relative
-	background-color: transparentize($background-color, 0.2)
-	//background-color: transparent
-	//backdrop-filter: blur(7px)
-	//-webkit-backdrop-filter: blur(7px)
-	padding: 10px
-
-	.content
-		position: sticky
-		position: -webkit-sticky
-		top: 33.3%
-		border-radius: 5px
-		width: 100%
-		max-width: 800px
-		padding: 10px
-		margin-left: auto
-		margin-right: auto
-
-		.mobile
-			display: none
-
-		@media (min-width: $mobile-breakpoint)
-			display: flex
-
-			> *
-				margin-bottom: auto
-				margin-top: auto
-
-		@media (max-width: $mobile-breakpoint)
-			top: 10%
-
-			.desktop
-				display: none
-			.mobile
-				display: block
-
-			img
-				margin-left: auto
-				margin-right: auto
-
-		img
-			width: 200px
-			height: 200px
-			display: block
-
-		h1
-			font-size: 3em
-			display: inline-block
-			padding: 10px 15px
-			color: $primary-color
-
-		p
-			font-size: 1.5em
-			padding: 0 15px
-
-	&:nth-of-type(1)
-		height: 1000px
-
-	&:nth-of-type(2)
-		height: 600px
-
-	&:nth-of-type(3)
-		height: 600px
-
-	&:nth-of-type(4)
-		height: 1000px
+	z-index: -1
